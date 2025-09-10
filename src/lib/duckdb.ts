@@ -13,5 +13,5 @@ export const querySample = async (): Promise<any[]> => {
   await conn.run(`LOAD httpfs; `)
   const url = `https://example-duckdb-vercel.vercel.app/example/csv`
   const response = await conn.run(`SELECT * FROM read_csv('${url}')`)
-  return response.getRowsJS()
+  return response.getRowObjectsJson()
 }
