@@ -6,7 +6,7 @@ import { getVersion, querySample } from "../../lib/duckdb"
 const Page = async () => {
   const version = await getVersion()
   const result = await querySample()
-  console.log(result)
+
   return (
     <div>
       <h1>DuckDB Version</h1>
