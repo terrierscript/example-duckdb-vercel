@@ -8,7 +8,7 @@ export const querySample = async () => {
 
   const instance = await DuckDBInstance.create()
   const conn = await instance.connect()
-  // await conn.run(`SET home_directory = '/tmp';`)
+  await conn.run(`SET home_directory = '/tmp';`)
   await conn.run(`INSTALL httpfs; `)
   await conn.run(`LOAD httpfs; `)
   const url = `https://example-duckdb-vercel.vercel.app/example/csv`
