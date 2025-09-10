@@ -1,6 +1,8 @@
 "use server"
 import { getVersion } from "../../lib/duckdb"
 
+
+
 const Page = async () => {
   const version = await getVersion()
   return (
