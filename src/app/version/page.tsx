@@ -14,7 +14,7 @@ const Page = async () => {
       <table>
 
         {result.map((r, index) => {
-          return <tr key={i}>
+          return <tr key={index}>
             <td>{r.item}</td>
             <td>{r.name}</td>
           </tr>

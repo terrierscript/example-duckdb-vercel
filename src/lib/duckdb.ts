@@ -4,7 +4,7 @@ export const getVersion = () => {
   return duckdb.version()
 }
 
-export const querySample = async () => {
+export const querySample = async (): Promise<any[]> => {
 
   const instance = await DuckDBInstance.create()
   const conn = await instance.connect()
