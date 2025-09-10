@@ -1,7 +1,7 @@
 "use server"
 import { getVersion } from "../../lib/duckdb"
 
-const Page = async ({ props }: PageProps<"/version">) => {
+const Page = async () => {
   const version = await getVersion()
   return (
     <div>
